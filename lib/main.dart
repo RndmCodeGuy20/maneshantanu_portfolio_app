@@ -3,35 +3,26 @@ import 'package:watch_shop_app/constants/Palette.dart';
 import 'package:watch_shop_app/pages/AppBar.dart';
 import 'package:watch_shop_app/pages/Home.dart';
 import 'package:watch_shop_app/pages/KnowMe.dart';
+import 'package:watch_shop_app/pages/Project.dart';
+import 'package:watch_shop_app/pages/ProjectList.dart';
 
 void main() {
-  runApp(const ShopApp());
+  runApp(const PortfolioApp());
 }
 
-class ShopApp extends StatelessWidget {
-  const ShopApp({super.key});
+class PortfolioApp extends StatelessWidget {
+  const PortfolioApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Shop App',
+      title: 'Shantanu Mane',
       theme: ThemeData(
         primarySwatch: Palette.primaryBackground,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          leading: Image.asset(
-            'assets/icons/back.png',
-            scale: 15,
-          ),
-          elevation: 0,
-        ),
-        body: const KnowMePage(),
-        backgroundColor: Palette.primaryBackground,
-
-      ),
+      home: const HomePage(),
     );
   }
 }
